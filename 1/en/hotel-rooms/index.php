@@ -7,24 +7,24 @@
 
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Rubik:300,400,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="../assets/css/bootstrap.css">
-    <link rel="stylesheet" href="../assets/css/animate.css">
-    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../../assets/css/animate.css">
+    <link rel="stylesheet" href="../../assets/css/owl.carousel.min.css">
 
-    <link rel="stylesheet" href="../assets/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="../assets/fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../assets/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../../assets/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/css/magnific-popup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="canonical" href="https://Morningsidesuites.com/en/hotel-rooms/index.php" />
  
 
     <!-- Theme Style -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
     <!-- Google font -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700" rel="stylesheet">
 
   <!-- Custom stlylesheet -->
-  <link type="text/css" rel="stylesheet" href="../assets/css/404.css" />
+  <link type="text/css" rel="stylesheet" href="../../assets/css/404.css" />
   
  
 
@@ -38,7 +38,7 @@
       "@type": "Product",
       "name": "classic suite from 30,000 at Morning side suitesdsd",
       "image": 
-        "../images/presidential3.jpg",
+        "../../images/presidential3.jpg",
       "brand": {
         "@type": "Thing",
         "name": ""
@@ -66,7 +66,7 @@
       <nav class="navbar navbar-expand-md navbar-dark bg-light">
         <div class="container">
               <a class="navbar-brand" href="../index.php">
-              <img src="../images/hotel-logo.png" width="200" height="120" class="d-inline-block align-top" alt="Morning side suitesdsd" title="Morning side suitesdsd">
+              <img src="../../images/hotel-logo.png" width="200" height="120" class="d-inline-block align-top" alt="Morning side suitesdsd" title="Morning side suitesdsd">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -105,7 +105,7 @@
 
 
 
-    <section class="site-hero site-hero-innerpage overlay" data-stellar-background-ratio="0.5" style="background-image: url(../images/main_image.jpg);">
+    <section class="site-hero site-hero-innerpage overlay" data-stellar-background-ratio="0.5" style="background-image: url(../../images/main_image.jpg);">
       <div class="container">
         <div class="row align-items-center site-hero-inner justify-content-center">
           <div class="col-md-12 text-center">
@@ -149,7 +149,7 @@
      <div class="row ">                     <div class="col-sm-4 mb-4 mt-4">
                         <div class="container_all_rooms">
                           <a href="presidential-suite/index.php">
-                              <img src="../images/presidential.jpg" alt=" This room has 2 rooms, 1 parlor and 1 dining. Yes! Come experience the presidential treat in our presidential suite. It?s a feeling better experienced than imagined. With you in our presidential suite, you are nothing but a king. Our presidential suite offers just more than you would possibly ask. Each room is an exact replica of the other. Guests that want to stay with their families usually prefer the presidential room, especially when its one big family event, and everybody wants to stay in the same room. When you request for the presidential suite, you get our premium suite, with nothing but the best." title="presidential suite" style="width:100%;">
+                              <img src="../../images/presidential.jpg" alt=" This room has 2 rooms, 1 parlor and 1 dining. Yes! Come experience the presidential treat in our presidential suite. It?s a feeling better experienced than imagined. With you in our presidential suite, you are nothing but a king. Our presidential suite offers just more than you would possibly ask. Each room is an exact replica of the other. Guests that want to stay with their families usually prefer the presidential room, especially when its one big family event, and everybody wants to stay in the same room. When you request for the presidential suite, you get our premium suite, with nothing but the best." title="presidential suite" style="width:100%;">
                               <div class="content_all_rooms">
                                  <span style="margin-left: 10px; font-size: 24px;font-weight: 900">
                                     <strong style="font-size: 24px;font-weight: 900;"> presidential suite</strong>
@@ -197,7 +197,7 @@
      <div class="row ">                     <div class="col-sm-4 mb-4 mt-4">
                         <div class="container_all_rooms">
                           <a href="business-suite/index.php">
-                              <img src="../images/business.jpg" alt=" Our business suites consists of a room and a sitting room. Exclusively reserved for guests who crave for the unique provisions only associated with us providing your hospitality needs. Just between the sitting room and the bedroom is an interconnecting door whose access can be restricted by the occupants. Also in the bedroom is a small sitting area, able to seat two persons. Stay in our business suites and enjoy daily supply of fresh toiletries, excellent room service, free access to high speed internet, complimentary breakfast, and lots more. It?s indeed a total package for the business minded individual." title="business suite" style="width:100%;">
+                              <img src="../../images/business.jpg" alt=" Our business suites consists of a room and a sitting room. Exclusively reserved for guests who crave for the unique provisions only associated with us providing your hospitality needs. Just between the sitting room and the bedroom is an interconnecting door whose access can be restricted by the occupants. Also in the bedroom is a small sitting area, able to seat two persons. Stay in our business suites and enjoy daily supply of fresh toiletries, excellent room service, free access to high speed internet, complimentary breakfast, and lots more. It?s indeed a total package for the business minded individual." title="business suite" style="width:100%;">
                               <div class="content_all_rooms">
                                  <span style="margin-left: 10px; font-size: 24px;font-weight: 900">
                                     <strong style="font-size: 24px;font-weight: 900;"> business suite</strong>
@@ -245,7 +245,7 @@
      <div class="row ">                     <div class="col-sm-4 mb-4 mt-4">
                         <div class="container_all_rooms">
                           <a href="classic-suite/index.php">
-                              <img src="../images/classic.jpg" alt=" Classic not just by name. Our classic rooms boast of a wide array of truly first class quality. The interior is just superb, leaving our guests in awe as to what is on offer. The colors, wall decorations and paintings reflect great works of art. There is the presence of a sitting area next to a king size bed in the fully air-conditioned classic room. The classic rooms come with an intercom which means our guests are one dial away from their requests been met. Our guests also have access to high speed internet and other hotel facilities including but not limited to the swimming pool, lounge, and the likes. For every night spend in our classic room, a complimentary breakfast is guaranteed. This is simply putting you first!" title="classic suite" style="width:100%;">
+                              <img src="../../images/classic.jpg" alt=" Classic not just by name. Our classic rooms boast of a wide array of truly first class quality. The interior is just superb, leaving our guests in awe as to what is on offer. The colors, wall decorations and paintings reflect great works of art. There is the presence of a sitting area next to a king size bed in the fully air-conditioned classic room. The classic rooms come with an intercom which means our guests are one dial away from their requests been met. Our guests also have access to high speed internet and other hotel facilities including but not limited to the swimming pool, lounge, and the likes. For every night spend in our classic room, a complimentary breakfast is guaranteed. This is simply putting you first!" title="classic suite" style="width:100%;">
                               <div class="content_all_rooms">
                                  <span style="margin-left: 10px; font-size: 24px;font-weight: 900">
                                     <strong style="font-size: 24px;font-weight: 900;"> classic suite</strong>
@@ -349,15 +349,15 @@
       
       <!-- loader -->
       <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
-      <script src="../assets/js/jquery-3.2.1.min.js"></script>
-      <script src="../assets/js/jquery-migrate-3.0.0.js"></script>
-      <script src="../assets/js/popper.min.js"></script>
-      <script src="../assets/js/bootstrap.min.js"></script>
-      <script src="../assets/js/owl.carousel.min.js"></script>
-      <script src="../assets/js/jquery.waypoints.min.js"></script>
-      <script src="../assets/js/jquery.stellar.min.js"></script>
-      <script src="../assets/js/jquery.magnific-popup.min.js"></script>
-      <script src="../assets/js/magnific-popup-options.js"></script>
-      <script src="../assets/js/main.js"></script>
+      <script src="../../assets/js/jquery-3.2.1.min.js"></script>
+      <script src="../../assets/js/jquery-migrate-3.0.0.js"></script>
+      <script src="../../assets/js/popper.min.js"></script>
+      <script src="../../assets/js/bootstrap.min.js"></script>
+      <script src="../../assets/js/owl.carousel.min.js"></script>
+      <script src="../../assets/js/jquery.waypoints.min.js"></script>
+      <script src="../../assets/js/jquery.stellar.min.js"></script>
+      <script src="../../assets/js/jquery.magnific-popup.min.js"></script>
+      <script src="../../assets/js/magnific-popup-options.js"></script>
+      <script src="../../assets/js/main.js"></script>
     </body>
   </html>

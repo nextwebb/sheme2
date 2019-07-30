@@ -1,12 +1,13 @@
 <?php
   ob_start();
+    $main = 2;
   ?>
 <!doctype html>
 <head>
-    <title><?php echo room(1)[1][3]?> from <?php echo number_format(room(1)[2][3]) ?> at <?php echo settings(1)['hotel_name'] ?></title>
+    <title>Enjoy the relaxing atmosphere of <?php echo settings($id)['hotel_name'] ?> hotel fully equipped guest rooms and suites.</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content=" Best hotel room price in ikeja from  <?php echo number_format(room(1)[2][3]) ?> at <?php echo settings(1)['hotel_name'] ?>">
+    <meta name="description" content=" Enjoy the relaxing atmosphere of <?php echo settings($id)['hotel_name'] ?> fully equipped guest rooms and suites, free Wi-Fi, telephone, flat-screen TV, air conditioning, heating with electric blinds and double-glazed windows.">
 
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Rubik:300,400,700" rel="stylesheet">
 
@@ -18,6 +19,7 @@
     <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="canonical" href="<?php echo 'https://'.settings($id)['domain']?>/en/hotel-rooms/index.php" />
  
 
     <!-- Theme Style -->
@@ -65,7 +67,7 @@
      
        <?php 
   
-       include("includes/navbar.php");
+       include("includes/navbar2.php");
 
     ?>
     </header>
@@ -88,13 +90,13 @@
                 <nav class=" breadcrumb_white text-center">
                   <ol class="breadcrumb justify-content-center" itemscope itemtype="https://schema.org/BreadcrumbList" >
                     <li class="breadcrumb_for_list_Items" itemprop="itemListElement" itemscope
-      itemtype="https://schema.org/ListItem"><a class='breadcrumb_icon' href="index.php" itemtype="https://schema.org/Thing"
+      itemtype="https://schema.org/ListItem"><a class='breadcrumb_icon' href="../index.php" itemtype="https://schema.org/Thing"
        itemprop="item"><span itemprop="name">&nbsp;Home &nbsp;</span></a>
                         <meta itemprop="position" content="1" />
                     </li>
                       
                     <li class="breadcrumb_for_list_Items" itemprop="itemListElement" itemscope
-      itemtype="https://schema.org/ListItem"><a class='breadcrumb_icon' href="hotel-rooms" itemtype="https://schema.org/Thing"
+      itemtype="https://schema.org/ListItem"><a class='breadcrumb_icon' href="index.php" itemtype="https://schema.org/Thing"
        itemprop="item">&<span itemprop="name">&nbsp;Rooms &nbsp;<span></a>
                         <meta itemprop="position" content="2" />
                     </li>
@@ -149,7 +151,7 @@
                             <i class="fa fa-star" aria-hidden="true" style="font-size: 15px"></i>
                             <i class="fa fa-star" aria-hidden="true" style="font-size: 15px"></i>
                             <i class="fa fa-star" aria-hidden="true" style="font-size: 15px"></i>
-                                        <del>N</del><?php echo number_format(room(1)[2][$i])?>;
+                                       <?php echo '₦'.number_format(room(1)[2][$i])?>;
                         <p>
                           <?php echo room(1)[4][$i]?>
                         </p>
@@ -181,24 +183,27 @@
   </div>
 
 
-<?php include('includes/footer.php'); ?>
-
-<?php
+<?php include('includes/footer.php'); 
   
   $data = ob_get_contents();  
 
   ob_clean();  // clears buffer and closes buffering
 
-  @mkdir(1);
-  @mkdir("1/hotel-rooms");
   $data1 =str_replace("assets/", "../assets/", $data);
 
   $data1 =str_replace("images/", "../images/", $data1);
 
-  $data1 =str_replace("opt/lampp/htdocs/", "", $data1);
+  
 
-  file_put_contents("1/hotel-rooms/index.php", $data1);
-   //echo $data;
+  $data_en =str_replace("../images/", "../../images/", $data1);
+
+  $data_en =str_replace("../assets/", "../../assets/", $data_en);
+
+ 
+
+  file_put_contents($id."/hotel-rooms/index.php", $data1);
+  file_put_contents($id."/en/hotel-rooms/index.php", $data_en);
+   // echo $data;
   ?>
    
    

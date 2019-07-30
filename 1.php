@@ -1,16 +1,18 @@
   <?php
   ob_start();
+   $main = 1;
+
   ?>
 
   <!doctype html>
 <html lang="en">
   <head>
-    <title><?php echo room(1)[1][3]?> from <?php echo number_format(room(1)[2][3]) ?> at <?php echo settings(1)['hotel_name'] ?></title>
+    <title><?php echo settings($id)['hotel_name'] .",". settings($id)['city'] ." ". settings($id)['country']. ". Rooms and Suites from ₦".number_format(room($id)[2][3])?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content=" Best hotel room price in ikeja from  <?php echo number_format(room(1)[2][3]) ?> at <?php echo settings(1)['hotel_name'] ?>">
+    <meta name="description" content=" Best hotel room rate in <?php echo settings($id)['city'] ?> from  <?php echo '₦' .number_format(room($id)[2][3]) ?> at <?php echo settings($id)['hotel_name'] ?>">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Rubik:300,400,700" rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/<?php echo settings(1)['logo'] ?>">
+    <link rel="icon" type="image/png" href="images/<?php echo settings($id)['logo'] ?>">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
@@ -18,6 +20,9 @@
     <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="canonical" href="<?php echo 'https://'.settings($id)['domain']?>/en/index.php" />
+
+
  
     <!-- Theme Style -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -34,7 +39,7 @@
      
       <?php 
   
-       include("includes/navbar.php");
+       include("includes/navbar1.php");
 
     ?>
     
@@ -47,7 +52,7 @@
 {
   "@context" : "http://schema.org",
   "@type" : "article",
-  "name" : "<?php echo settings(1)['hotel_name'] ?>",
+  "name" : "<?php echo settings($id)['hotel_name'] ?>",
   "dateModified" : "2019-07-18",
   "author" : {
     "@type" : "Person",
@@ -55,21 +60,21 @@
   },
   "mainEntityOfPage": {
          "@type": "WebPage",
-         "@id": "<?php echo settings(1)['domain'] ?>"
+         "@id": "<?php echo settings($id)['domain'] ?>"
          },
-  "headline" : "<?php echo settings(1)['hotel_name'] ?>",
+  "headline" : "<?php echo settings($id)['hotel_name'] ?>",
   "datePublished" : "2019-07-18 or 2019-07-27T10:31",
-  "image" : "images/<?php echo room(1)[7][3][2] ?>",
-  "articleBody" : "<?php echo settings(1)['description'] ?>",
+  "image" : "images/<?php echo room($id)[7][3][2] ?>",
+  "articleBody" : "<?php echo settings($id)['description'] ?>",
   "publisher": {
         "@type": "Organization",
-        "name": "<?php echo settings(1)['hotel_name'] ?>",
+        "name": "<?php echo settings($id)['hotel_name'] ?>",
         "logo": {
             "@type": "ImageObject",
-            "name": "<?php echo settings(1)['hotel_name'] ?>",
+            "name": "<?php echo settings($id)['hotel_name'] ?>",
             "width": "100",
             "height": "100",
-            "url": "images/<?php echo settings(1)['logo'] ?>"
+            "url": "images/<?php echo settings($id)['logo'] ?>"
         },
   "aggregateRating" : {
     "@type" : "AggregateRating",
@@ -84,16 +89,16 @@
 {
   "@context" : "http://schema.org",
   "@type" : "LocalBusiness",
-  "name" : "<?php echo settings(1)['hotel_name'] ?>",
-  "image" : "images/<?php echo settings(1)['logo'] ?>",
-  "telephone" : "<?php echo settings(1)['hotline']  ?>",
-  "email" : "<?php echo settings(1)['frontoffice_mail']  ?>",
-  "priceRange" : "N<?php echo number_format(room(1)[2][3]) ?> - N<?php echo number_format(room(1)[2][1]) ?>",
+  "name" : "<?php echo settings($id)['hotel_name'] ?>",
+  "image" : "images/<?php echo settings($id)['logo'] ?>",
+  "telephone" : "<?php echo settings($id)['hotline']  ?>",
+  "email" : "<?php echo settings($id)['frontoffice_mail']  ?>",
+  "priceRange" : "<?php echo '₦'. number_format(room($id)[2][3]) ?> - <?php echo "₦". number_format(room($id)[2][1]) ?>",
   "address" : {
     "@type" : "PostalAddress",
-    "streetAddress" : "<?php echo settings(1)['address1']  ?>",
-    "addressLocality" : "<?php echo settings(1)['address1']  ?>",
-    "addressRegion" : "<?php echo settings(1)['address1']  ?>"
+    "streetAddress" : "<?php echo settings($id)['address1']  ?>",
+    "addressLocality" : "<?php echo settings($id)['address1']  ?>",
+    "addressRegion" : "<?php echo settings($id)['address1']  ?>"
   },
   "aggregateRating" : {
     "@type" : "AggregateRating",
@@ -109,12 +114,12 @@
         {
       "@context": "https://schema.org/",
       "@type": "Product",
-      "name": "<?php echo room(1)[1][3]?> from <?php echo number_format(room(1)[2][3]) ?> at <?php echo settings(1)['hotel_name'] ?>",
+      "name": "<?php echo room($id)[1][3]?> from <?php echo "₦".number_format(room($id)[2][3]) ?> at <?php echo settings($id)['hotel_name'] ?>",
       "image": 
-        "images/<?php echo room(1)[7][1][3] ?>",
+        "images/<?php echo room($id)[7][1][3] ?>",
       "brand": {
         "@type": "Thing",
-        "name": "<?php settings(1)['hotel_name'] ?>"
+        "name": "<?php settings($id)['hotel_name'] ?>"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -123,14 +128,14 @@
       },
       "offers": {
         "@type": "AggregateOffer",
-        "lowPrice": "<?php echo room(1)[2][3] ?>",
-        "highPrice": "<?php echo room(1)[2][1] ?>",
+        "lowPrice": "<?php echo room($id)[2][3] ?>",
+        "highPrice": "<?php echo room($id)[2][1] ?>",
         "priceCurrency": "NGN"
       }
     }
   
 </script>
-<section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/<?php echo settings(1)['main_img']; ?>);")>
+<section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/<?php echo settings($id)['main_img']; ?>);")>
       <div class="container">
         <div class="row align-items-center site-hero-inner justify-content-center">
           <div class="col-md-12 text-center">
@@ -165,12 +170,12 @@
           <div class="col-md-6">
             <div class="heading-wrap  element-animate">
               <h2 class="heading text-center">Stay and Enjoy</h2>
-              <p class="mb-5"> <?php echo settings(1)['description'] ?> </p>
+              <p class="mb-5"> <?php echo settings($id)['description'] ?> </p>
               
             </div>
           </div>
           <div class="col-md-6">
-            <img src="images/<?php echo fac(1)[7][3][1] ?>" alt="<?php echo fac(1)[4][3] ?>" title="<?php echo fac(1)[1][3] ?>" class="img-md-fluid">
+            <img src="images/<?php echo fac($id)[7][3][1] ?>" alt="<?php echo fac($id)[4][3] ?>" title="<?php echo fac($id)[1][3] ?>" class="img-md-fluid">
           </div>
         </div>
       </div>
@@ -187,19 +192,15 @@
           <div class="col-md-7">
             <div class="media d-block room mb-0">
               <div style="position: relative; background-color: rgba(0,0,0,0.5);">
-                <img src="images/<?php echo room(1)[7][1][3] ?>" alt="<?php echo room(1)[4][1] ?>" title="<?php echo room(1)[1][1] ?>" class="img-fluid">
+                <img src="images/<?php echo room($id)[7][1][3] ?>" alt="<?php echo room($id)[4][1] ?>" title="<?php echo room($id)[1][1] ?>" class="img-fluid">
                 <div style="position: absolute;bottom: 0px; width: 100%; background-color:rgba(0,0,0,0.5); padding: 10px">
                   <div class="clearfix">
                     <span class="float-right" style="color: #fff; padding-right:10px">
-                      <!-- <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star" aria-hidden="true"></i> -->
-                      <?php echo "<del>N</del>".number_format(room(1)[2][1]) ?> 
+                      
+                      <?php echo "₦".number_format(room($id)[2][1]) ?> 
                     </span>
                     <span class="float-left">
-                      <strong style="color: #fff; padding: 10px;  "><?php echo room(1)[1][1] ?> </strong>
+                      <strong style="color: #fff; padding: 10px;  "><?php echo room($id)[1][1] ?> </strong>
                       <div  style=" margin-left: 10px;margin-top:0px; padding-top: 0px;color: #fff; " class="mt-0">  <small>
                           <i class="fa fa-star" aria-hidden="true"></i>
                           <i class="fa fa-star" aria-hidden="true"></i>
@@ -220,7 +221,7 @@
                 
                 <div class="clearfix">
                           <div class="col-sm-8 float-left">
-                            <h3 class="mt-0"><a href="hotel-rooms/<?php echo strtolower(str_replace(" ","-", room(1)[1][1]))  ?>/index.php"><?php echo room(1)[1][1] ?> </a></h3>
+                            <h3 class="mt-0"><a href="hotel-rooms/<?php echo strtolower(str_replace(" ","-", room($id)[1][1]))  ?>/index.php"><?php echo room($id)[1][1] ?> </a></h3>
                               <ul class="room-specs">
                                 <li><span class="ion-ios-people-outline"></span> 2 Guests</li>
                                 <li><span class="ion-ios-crop"></span> 22 ft <sup>2</sup></li>
@@ -233,7 +234,7 @@
                           <div class="col-sm-4 float-right" style=" margin-top: 30px">
                             <P>
                               <?php
-                                $text = room(1)[4][1];
+                                $text = room($id)[4][1];
                                 $max =45;
                                 $append= '<a href="room1.html">..continue..</a>';
                                 echo substr($text, 0, $max).$append;
@@ -246,10 +247,10 @@
             </div>
           </div>
           <div class="col-md-5 room-thumbnail-absolute">
-            <a href="hotel-rooms/<?php echo strtolower(str_replace(" ","-", room(1)[1][2]))  ?>/index.php" class="media d-block room bg first-room" >
+            <a href="hotel-rooms/<?php echo strtolower(str_replace(" ","-", room($id)[1][2]))  ?>/index.php" class="media d-block room bg first-room" >
               <div style="position: relative; background-color: rgba(0,0,0,0.5);">
                  
-                      <img src="images/<?php echo room(1)[7][2][1] ?>" alt="<?php echo room(1)[4][2] ?>" title="<?php echo room(1)[1][2] ?>" class="img-fluid">
+                      <img src="images/<?php echo room($id)[7][2][1] ?>" alt="<?php echo room($id)[4][2] ?>" title="<?php echo room($id)[1][2] ?>" class="img-fluid">
 
                 <div style="position: absolute;bottom: 0px; width: 100%;background-color:rgba(0,0,0,0.5); padding: 10px">
                   <div class="clearfix">
@@ -259,7 +260,7 @@
                       <i class="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <span class="float-left">
-                      <strong style="color: #fff; padding: 10px;  "><?php echo room(1)[1][2] ?></strong>
+                      <strong style="color: #fff; padding: 10px;  "><?php echo room($id)[1][2] ?></strong>
                     </span>
                   </div>
                     
@@ -268,10 +269,10 @@
               </div>
                     
             </a>
-            <a href="hotel-rooms/<?php echo strtolower(str_replace(" ","-", room(1)[1][3]))  ?>/index.php" class="media d-block room bg first-room" >
+            <a href="hotel-rooms/<?php echo strtolower(str_replace(" ","-", room($id)[1][3]))  ?>/index.php" class="media d-block room bg first-room" >
               <div style="position: relative; background-color: rgba(0,0,0,0.5);">
                  
-                      <img src="images/<?php echo room(1)[7][3][1] ?>" alt="<?php echo room(1)[4][3] ?>" title="<?php echo room(1)[1][3] ?>" class="img-fluid">
+                      <img src="images/<?php echo room($id)[7][3][1] ?>" alt="<?php echo room($id)[4][3] ?>" title="<?php echo room($id)[1][3] ?>" class="img-fluid">
 
                 <div style="position: absolute;bottom: 0px;background-color:rgba(0,0,0,0.5); width: 100%; padding: 10px">
                   <div class="clearfix">
@@ -281,7 +282,7 @@
                       <i class="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <span class="float-left">
-                      <strong style="color: #fff; padding: 10px; "><?php echo room(1)[1][3] ?></strong>
+                      <strong style="color: #fff; padding: 10px; "><?php echo room($id)[1][3] ?></strong>
                     </span>
                   </div>
                     
@@ -297,11 +298,11 @@
     </section>
    
     
-    <section class="section-cover" data-stellar-background-ratio="0.5" style="color: black; background-image: url(images/<?php echo room(1)[7][1][2] ?>) ;">
+    <section class="section-cover" data-stellar-background-ratio="0.5" style="color: black; background-image: url(images/<?php echo room($id)[7][1][2] ?>) ;">
       <div class="container">
         <div class="row justify-content-center align-items-center intro">
           <div class="col-md-9 text-center element-animate">
-            <h2><?php echo settings(1)['footer_desp'] ?></h2>
+            <h2><?php echo settings($id)['footer_desp'] ?></h2>
             <p class="lead mb-5"></p>
             <div class="btn-play-wrap"><a href="https://vimeo.com/channels/staffpicks/93951774" class="btn-play popup-vimeo "><span class="ion-ios-play"></span></a></div>
           </div>
@@ -320,14 +321,14 @@
         <div class="row ">
           <div class="col-md-4"  >
             <div class="post-entry">
-              <a href="room2.html"><img src="images/<?php echo gallery(1)[3][10] ?>" alt="<?php echo gallery(1)[2][10] ?>"  title="<?php  echo gallery(1)[1][10] ?>" class="img-fluid"></a>
+              <a href="room2.html"><img src="images/<?php echo gallery($id)[3][10] ?>" alt="<?php echo gallery($id)[2][10] ?>"  title="<?php  echo gallery($id)[1][10] ?>" class="img-fluid"></a>
               <div class="body-text">
-                <div class="category"><?php echo gallery(1)[1][10] ?></div>
-                <h3 class="mb-3"><a href="room2.html"><?php echo gallery(1)[1][10] ?></a></h3>
+                <div class="category"><?php echo gallery($id)[1][10] ?></div>
+                <h3 class="mb-3"><a href="room2.html"><?php echo gallery($id)[1][10] ?></a></h3>
                 <p class="mb-4">
                   <?php
                       
-                            $text = gallery(1)[2][10];
+                            $text = gallery($id)[2][10];
                             $max =45;
                             $append= '<a href="room1.html">..continue..</a>';
                             echo substr($text, 0, $max).$append;
@@ -340,23 +341,23 @@
           </div>
           <div class="col-md-4">
             <div class="post-entry" >
-              <a href=""><img src="images/<?php echo gallery(1)[3][9] ?>" alt="<?php echo gallery(1)[2][9] ?>" title="<?php echo gallery(1)[1][9] ?>"  class="img-fluid"></a>
+              <a href=""><img src="images/<?php echo gallery($id)[3][9] ?>" alt="<?php echo gallery($id)[2][9] ?>" title="<?php echo gallery($id)[1][9] ?>"  class="img-fluid"></a>
               <div class="body-text">
-                <div class="category"><?php echo gallery(1)[1][9] ?></div>
-                <h3 class="mb-3"><a href="gallery.html"><?php echo gallery(1)[1][9] ?></a></h3>
-                <p class="mb-4"><?php echo gallery(1)[2][9] ?></p>
+                <div class="category"><?php echo gallery($id)[1][9] ?></div>
+                <h3 class="mb-3"><a href="gallery.html"><?php echo gallery($id)[1][9] ?></a></h3>
+                <p class="mb-4"><?php echo gallery($id)[2][9] ?></p>
               </div>
             </div>
           </div>
           <div class="col-md-4" >
             <div class="post-entry" >
-              <a href="room1.html"><img src="images/<?php echo gallery(1)[3][8] ?>" alt="<?php echo gallery(1)[2][8] ?>" title="<?php echo gallery(1)[1][8] ?>" class="img-fluid"></a>
+              <a href="room1.html"><img src="images/<?php echo gallery($id)[3][8] ?>" alt="<?php echo gallery($id)[2][8] ?>" title="<?php echo gallery($id)[1][8] ?>" class="img-fluid"></a>
               <div class="body-text">
-                <div class="category"><?php echo gallery(1)[1][8] ?></div>
-                <h3 class="mb-3"><a href="room1.html"><?php echo gallery(1)[1][8] ?></a></h3>
+                <div class="category"><?php echo gallery($id)[1][8] ?></div>
+                <h3 class="mb-3"><a href="room1.html"><?php echo gallery($id)[1][8] ?></a></h3>
                 <p class="mb-4">
                  <?php 
-                            $text = gallery(1)[2][8];
+                            $text = gallery($id)[2][8];
                             $max =44;
                             $append= '<a href="room1.html">..continue..</a>';
                             echo substr($text, 0, $max).$append;
@@ -391,12 +392,12 @@
             <div class="row ">
           <div class="col-md-4" style=" margin-top:20px;margin-bottom: 10px;">
             <div class="post-entry mh-100 d-inline-block p-2 " style="height:400px; background-color: #fff";>
-              <a href="gallery.html"><img  src="images/<?php echo fac(1)[7][5][1]?>"  class="img-fluid" alt="<?php echo fac(1)[5][5] ?>" title="<?php echo fac(1)[1][5] ?>"></a>
+              <a href="gallery.html"><img  src="images/<?php echo fac($id)[7][5][1]?>"  class="img-fluid" alt="<?php echo fac($id)[5][5] ?>" title="<?php echo fac($id)[1][5] ?>"></a>
               <div class="body-text" style="height: 100px; padding: 0px;">
-                <div class="category"><?php echo fac(1)[1][5] ?></div>
-                <h3 class=""><a href="gallery.html"><?php echo fac(1)[1][5] ?></a></h3>
+                <div class="category"><?php echo fac($id)[1][5] ?></div>
+                <h3 class=""><a href="gallery.html"><?php echo fac($id)[1][5] ?></a></h3>
                 <p class="mb-4" style="height:100px;background-color: #fff"> <?php 
-                            $text = fac(1)[5][5];
+                            $text = fac($id)[5][5];
                             $max =45;
                             $append= '<a href="room1.html">..continue..</a>';
                             echo substr($text, 0, $max).$append;?></p>
@@ -405,12 +406,12 @@
           </div>
           <div class="col-md-4" style=" margin-top:20px;margin-bottom: 10px;">
             <div class="post-entry mh-100 d-inline-block p-2 " style="height:400px; background-color: #fff";>
-              <a href="gallery.html"><img src="images/<?php echo fac(1)[7][4][1]?>"  class="img-fluid" alt="<?php echo fac(1)[5][4] ?>" title="<?php echo fac(1)[1][4] ?>"></a>
+              <a href="gallery.html"><img src="images/<?php echo fac($id)[7][4][1]?>"  class="img-fluid" alt="<?php echo fac($id)[5][4] ?>" title="<?php echo fac($id)[1][4] ?>"></a>
               <div class="body-text" style="height: 100px; padding: 0px;">
-                <div class="category"><?php echo fac(1)[1][4] ?></div>
-                <h3 class=""><a href="gallery.html"><?php echo fac(1)[1][4] ?></a></h3>
+                <div class="category"><?php echo fac($id)[1][4] ?></div>
+                <h3 class=""><a href="gallery.html"><?php echo fac($id)[1][4] ?></a></h3>
                 <p class="mb-4" style="height:100px;background-color: #fff"><?php  
-                        $text = fac(1)[5][4];
+                        $text = fac($id)[5][4];
                             $max =45;
                             $append= '<a href="room1.html">..continue..</a>';
                             echo substr($text, 0, $max).$append;
@@ -418,7 +419,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4" style=" min-height: 400px; position: relative; background-image: url(images/<?php echo fac(1)[7][6][1]?>); margin: 20px 0px 40px 0px; padding: 0px 15px 0px 15px;">
+          <div class="col-md-4" style=" min-height: 400px; position: relative; background-image: url(images/<?php echo fac($id)[7][6][1]?>); margin: 20px 0px 40px 0px; padding: 0px 15px 0px 15px;">
             
               <div style="position: absolute;font-size:24px; font-size: 24px;font-weight: 900;top: 50%;left: 25%; width: 100% ">
                 <a href="" style="color: #fff">
@@ -442,11 +443,15 @@
 
   ob_clean();  // clears buffer and closes buffering
 
-  @mkdir(1);
+ 
 
-  $data1 =str_replace("opt/lampp/htdocs/", "", $data);
+  $data_en =str_replace("images/", "../images/", $data);
 
-  file_put_contents("1/index.php", $data1);
-   //echo $data;
+  $data_en =str_replace("assets/", "../assets/", $data_en);
+
+  file_put_contents($id."/en/index.php", $data_en);
+
+  file_put_contents($id."/index.php", $data);
+  echo $data;
   ?>
  

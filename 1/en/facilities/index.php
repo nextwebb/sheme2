@@ -11,25 +11,25 @@
 
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Rubik:300,400,700" rel="stylesheet">
 
-        <link rel="stylesheet" href="../assets/css/bootstrap.css">
-        <link rel="stylesheet" href="../assets/css/animate.css">
-        <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="../../assets/css/bootstrap.css">
+        <link rel="stylesheet" href="../../assets/css/animate.css">
+        <link rel="stylesheet" href="../../assets/css/owl.carousel.min.css">
 
-        <link rel="stylesheet" href="../assets/fonts/ionicons/css/ionicons.min.css">
-        <link rel="stylesheet" href="../assets/fonts/fontawesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="../../assets/fonts/ionicons/css/ionicons.min.css">
+        <link rel="stylesheet" href="../../assets/fonts/fontawesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../assets/css/magnific-popup.css">
         <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
          <link rel="canonical" href="https://Morningsidesuites.com/en/facilities/index.php" />
  
 
 
         <!-- Theme Style -->
-        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../../assets/css/style.css">
         <!-- Google font -->
       <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700" rel="stylesheet">
 
       <!-- Custom stlylesheet -->
-      <link type="text/css" rel="stylesheet" href="../assets/css/404.css"/>
+      <link type="text/css" rel="stylesheet" href="../../assets/css/404.css"/>
       <style type="text/css">
         
 
@@ -48,7 +48,7 @@
        "priceRange" : "₦30,000 - ₦80,000",
        "url" : "Morningsidesuites.com",
        "hasMap" : "",
-       "image" : "../images/pool.jpg",
+       "image" : "../../images/pool.jpg",
        "description" : "",
        "@type" : "Hotel",
        "address" : {
@@ -67,7 +67,7 @@
       "@context" : "http://schema.org",
       "@type" : "LocalBusiness",
       "name" : "Morning side suitesdsd",
-      "image" : "../images/hotel-logo.png",
+      "image" : "../../images/hotel-logo.png",
       "telephone" : "(+234) 8032-749-921",
       "email" : "fredrickoladipupo@gmail.com",
       "priceRange" : "₦30,000 - ₦80,000",
@@ -97,7 +97,7 @@
       <nav class="navbar navbar-expand-md navbar-dark bg-light">
         <div class="container">
               <a class="navbar-brand" href="../index.php">
-              <img src="../images/hotel-logo.png" width="200" height="120" class="d-inline-block align-top" alt="Morning side suitesdsd" title="Morning side suitesdsd">
+              <img src="../../images/hotel-logo.png" width="200" height="120" class="d-inline-block align-top" alt="Morning side suitesdsd" title="Morning side suitesdsd">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -137,7 +137,7 @@
         
 
 
-        <section class="site-hero site-hero-innerpage overlay" data-stellar-background-ratio="0.5" style="background-image: url(../images/main_image.jpg); " >
+        <section class="site-hero site-hero-innerpage overlay" data-stellar-background-ratio="0.5" style="background-image: url(../../images/main_image.jpg); " >
           <div class="container">
             <div class="row align-items-center site-hero-inner justify-content-center">
               <div class="col-md-12 text-center">
@@ -191,7 +191,7 @@
               <div class="col-md-6">                    <div class="row mt-4" style="padding: 10px">
                      
                     <div>
-                      <div  style="position: relative;"><img class="img-fluid" src="../images/latin.jpg
+                      <div  style="position: relative;"><img class="img-fluid" src="../../images/latin.jpg
                         " alt="La Tavena Restaurant is our latin restaurant with a special menu. We servve Chilean food like Chuletas de Cerdo a la Chilena, Milanesa De Pollo and Asado de Lomo. Don't be baffled, these are Latin American food, prepared the Chilean way. We also serve some Italian dishes, with some other interesting dishes. If you are in town this Wednesday, we will be having an all pizza day. Perhaps you want "something light"? Try the Mango Mousse or the Ice cream Martini. If you get bored, you can have your meal in our balcony, with a beautiful view overlooking the city of Abuja. " title="La Tavena Latin Restaurant">  <div class="text-block"> 
                       <h4>La Tavena Latin Restaurant</h4>
                     </div>
@@ -204,7 +204,7 @@
               </div>             <div class="col-md-6">                    <div class="row mt-4" style="padding: 10px">
                      
                     <div>
-                      <div  style="position: relative;"><img class="img-fluid" src="../images/italian.jpg
+                      <div  style="position: relative;"><img class="img-fluid" src="../../images/italian.jpg
                         " alt="Don't be baffled, these are Latin American food, prepared the Chilean way. We also serve some Italian dishes, with some other interesting dishes. If you are in town this Wednesday, we will be having an all pizza day. Perhaps you want "something light"? Try the Mango Mousse or the Ice cream Martini. If you get bored, you can have your meal in our balcony, with a beautiful view overlooking the city of Abuja. " title="Italian Restaurant">  <div class="text-block"> 
                       <h4>Italian Restaurant</h4>
                     </div>
@@ -217,7 +217,7 @@
               </div>             <div class="col-md-6">                    <div class="row mt-4" style="padding: 10px">
                      
                     <div>
-                      <div  style="position: relative;"><img class="img-fluid" src="../images/pool.jpg
+                      <div  style="position: relative;"><img class="img-fluid" src="../../images/pool.jpg
                         " alt="Stay refreshed all day long. Our pool is surrounded by a well laid artificial turf and poolside seats. Your comfort is so important to us. We have all it takes to keep your thoughts away from the rigors of the day. Dive into our pool and rise above water to a refreshing feel. Order a glass of drink and life is nothing but good. Strategically located and opens up to an amazing surrounding view. " title="Swimming Pool">  <div class="text-block"> 
                       <h4>Swimming Pool</h4>
                     </div>
@@ -230,7 +230,7 @@
               </div>             <div class="col-md-6">                    <div class="row mt-4" style="padding: 10px">
                      
                     <div>
-                      <div  style="position: relative;"><img class="img-fluid" src="../images/restaurant.jpg
+                      <div  style="position: relative;"><img class="img-fluid" src="../../images/restaurant.jpg
                         " alt="We servve Chilean food like Chuletas de Cerdo a la Chilena, Milanesa De Pollo and Asado de Lomo. Don't be baffled, these are Latin American food, prepared the Chilean way. We also serve some Italian dishes, with some other interesting dishes. If you are in town this Wednesday, we will be having an all pizza day. Perhaps you want "something light"? Try the Mango Mousse or the Ice cream Martini. If you get bored, you can have your meal in our balcony, with a beautiful view overlooking the city of Abuja. " title="Our Restaurant">  <div class="text-block"> 
                       <h4>Our Restaurant</h4>
                     </div>
@@ -243,7 +243,7 @@
               </div>             <div class="col-md-6">                    <div class="row mt-4" style="padding: 10px">
                      
                     <div>
-                      <div  style="position: relative;"><img class="img-fluid" src="../images/ruthy.jpg
+                      <div  style="position: relative;"><img class="img-fluid" src="../../images/ruthy.jpg
                         " alt="You can never be hungry at The Statement Hotel. Our restaurant, Ruthy Savour signature will feed you fat. We are experienced in the delicate art of preparing meals, with a touch of art and the professionalism of international chefs. When you step into our restaurant, you immediately appreciate the time and effort we took to prepare not just our environment, but our meals. From our professional staff to our well lit environment; the interior decor to the taste of the food. Everything is tailor made to maximize your satisfaction. " title="Ruthy Savour Signature">  <div class="text-block"> 
                       <h4>Ruthy Savour Signature</h4>
                     </div>
@@ -256,7 +256,7 @@
               </div>             <div class="col-md-6">                    <div class="row mt-4" style="padding: 10px">
                      
                     <div>
-                      <div  style="position: relative;"><img class="img-fluid" src="../images/conference.jpg
+                      <div  style="position: relative;"><img class="img-fluid" src="../../images/conference.jpg
                         " alt="This halls are ideal for large and small groups. Our halls can sit over 120 persons in a banquet setting and up to two hundred in a cocktail setting. Collins mini hall is available for an NGO event, training or meeting. The hall is fully air-conditioned and have the added benefit of the restaurant serving our guests upon demand. It is all about you obviously. There is equally the provision of electronic gadgets to give the much need support to ensure a smooth event is held. We have your logistics all covered. All that is needed is to tell us your requirement, and we will handle the rest. " title="Our conference hall">  <div class="text-block"> 
                       <h4>Our conference hall</h4>
                     </div>
@@ -330,16 +330,16 @@
       
       <!-- loader -->
       <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
-      <script src="../assets/js/jquery-3.2.1.min.js"></script>
-      <script src="../assets/js/jquery-migrate-3.0.0.js"></script>
-      <script src="../assets/js/popper.min.js"></script>
-      <script src="../assets/js/bootstrap.min.js"></script>
-      <script src="../assets/js/owl.carousel.min.js"></script>
-      <script src="../assets/js/jquery.waypoints.min.js"></script>
-      <script src="../assets/js/jquery.stellar.min.js"></script>
-      <script src="../assets/js/jquery.magnific-popup.min.js"></script>
-      <script src="../assets/js/magnific-popup-options.js"></script>
-      <script src="../assets/js/main.js"></script>
+      <script src="../../assets/js/jquery-3.2.1.min.js"></script>
+      <script src="../../assets/js/jquery-migrate-3.0.0.js"></script>
+      <script src="../../assets/js/popper.min.js"></script>
+      <script src="../../assets/js/bootstrap.min.js"></script>
+      <script src="../../assets/js/owl.carousel.min.js"></script>
+      <script src="../../assets/js/jquery.waypoints.min.js"></script>
+      <script src="../../assets/js/jquery.stellar.min.js"></script>
+      <script src="../../assets/js/jquery.magnific-popup.min.js"></script>
+      <script src="../../assets/js/magnific-popup-options.js"></script>
+      <script src="../../assets/js/main.js"></script>
     </body>
   </html>
       

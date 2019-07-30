@@ -1,4 +1,5 @@
 <?php
+$id = 1;
 // $id=$_GET['hotel_id'];  
 // $template_id=$_GET['template_id']; 
  
@@ -27,7 +28,8 @@ include('function/facilities.php');
  include('3.php');
  include('4.php');
  include('5.php');
-include('6.php');
+ include('6.php');
+
  
 //---------- Copy Tins ----------------------//
 /*
@@ -45,23 +47,20 @@ copyr('extras/googlee967b79b57092639.html','../../hotels/'.$id.'/googlee967b79b5
 copyr('extras/BingSiteAuth.xml','../../hotels/'.$id.'/BingSiteAuth.xml');   */
 
  
-/*
-@mkdir('../../hotels/'.$id); //  Creates directory that is named the hotel ID
-@mkdir('../../hotels/'.$id."/en"); //  Creates directory that is named the en folder
-@mkdir('../../hotels/'.$id."/images"); //  Creates image folder
-@mkdir('../../hotels/'.$id."/en/rooms-and-suites"); //  Creates directory that is named the en folder
-@mkdir('../../hotels/'.$id."/rooms-and-suites"); //  Creates directory that is named the en folder
-@mkdir('../../hotels/'.$id."/en/hotel-services"); //  Creates directory that is named the en folder
-@mkdir('../../hotels/'.$id."/hotel-services"); //  Creates directory that is named the en folder
-@mkdir('../../hotels/'.$id."/en/pictures-and-gallery"); //  Creates directory that is named the en folder
-@mkdir('../../hotels/'.$id."/pictures-and-gallery"); //  Creates directory that is named the en folder
+@mkdir($id);
+@mkdir($id.'/en');
+@mkdir($id.'/hotel-rooms');
+@mkdir($id.'/en/hotel-rooms');
+@mkdir($id."/facilities");
+@mkdir($id."/en/facilities");
+@mkdir($id."/gallery");
+@mkdir($id."/en/gallery");
+@mkdir($id."/contact-us");
+@mkdir($id."/en/contact-us");
 
-@mkdir('../../hotels/'.$id."/en/deals-and-discounts"); //  Creates directory that is named the en folder
-@mkdir('../../hotels/'.$id."/deals-and-discounts"); //  Creates directory that is named the en folder
 
-@mkdir('../../hotels/'.$id."/en/contact-us"); //  Creates directory that is named the en folder
-@mkdir('../../hotels/'.$id."/contact-us"); //  Creates directory that is named the en folder
-*/
+
+
 exit();
 require_once('function/config.php');  
 include('function/hotelsettings.php');
@@ -74,26 +73,26 @@ include('function/hotelsettings.php');
 create_table($conn, $id);
 populate($id, $conn);
 
-@include('extras/copyImage.php');
-imgcopy($id);
+// @include('extras/copyImage.php');
+// imgcopy($id);
 
-// Copy Suplementary pages
-copyr('pictures','../../hotels/'.$id.'/pictures'); 
-copyr('css','../../hotels/'.$id.'/css'); 
-copyr('fonts','../../hotels/'.$id.'/fonts');
-copyr('js','../../hotels/'.$id.'/js');
-copyr('extras/sitemap.php','../../hotels/'.$id.'/sitemap.php'); 
-copyr('extras/googlec386c5cdb132dee2.html','../../hotels/'.$id.'/googlec386c5cdb132dee2.html'); 
-copyr('extras/googlee967b79b57092639.html','../../hotels/'.$id.'/googlee967b79b57092639.html');  
-copyr('extras/BingSiteAuth.xml','../../hotels/'.$id.'/BingSiteAuth.xml');   
+// // // Copy Suplementary pages
+// // copyr($id.'/hotel-rooms',$id.'/en/hotel-rooms'); 
+// // copyr($id.'facilities',$id.'/en/facility'); 
+// // copyr($id.'gallery',$id.'/en/gallery');
+// // copyr($id.'contact-us',$id.'/en/contact-s');
+// // copyr('extras/sitemap.php','../../hotels/'.$id.'/sitemap.php'); 
+// // copyr('extras/googlec386c5cdb132dee2.html','../../hotels/'.$id.'/googlec386c5cdb132dee2.html'); 
+// // copyr('extras/googlee967b79b57092639.html','../../hotels/'.$id.'/googlee967b79b57092639.html');  
+// // copyr('extras/BingSiteAuth.xml','../../hotels/'.$id.'/BingSiteAuth.xml');   
 
-// include('index.php');
-// include('rooms-and-suites/index.php'); 
-// include('hotel-services/index.php'); 
-// include('pictures-and-gallery/index.php'); 
-// include('deals-and-discounts/index.php'); 
-// include('contact-us/index.php'); 
+// // include('index.php');
+// // include('rooms-and-suites/index.php'); 
+// // include('hotel-services/index.php'); 
+// // include('pictures-and-gallery/index.php'); 
+// // include('deals-and-discounts/index.php'); 
+// // include('contact-us/index.php'); 
 
  
-echo "1";  
+// echo "1";  
 ?>

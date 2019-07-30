@@ -42,7 +42,16 @@ echo fac(1)[0];
 echo 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']."<br>";
 echo getcwd()."<br>";
 echo $_SERVER["DOCUMENT_ROOT"]."<br>";
-echo 'http://' . $_SERVER['HTTP_HOST'].getcwd();
+echo 'http://' . $_SERVER['HTTP_HOST'].getcwd().'<br>';
+echo gallery(1)[0];//10 images
+echo gallery(1)[3][1]."<br>";
+echo $_SERVER['SERVER_NAME'].$_SERVER['SCRIPT_NAME'].'<br>';
+echo $_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF'].'<br>';
+echo $data1_nav_room= strtolower(str_replace(" ","-", room(1)[1][1])).".php";
+$str='ASDFFF';
+echo strtolower($str);
+echo '<del>N</del>';
+
 // for ($i = 1; $i <=$n ; $i++) {
 
 		
@@ -84,6 +93,9 @@ echo 'http://' . $_SERVER['HTTP_HOST'].getcwd();
               </a>
             </div>
           </div> -->
+
+
+
 
 
 
