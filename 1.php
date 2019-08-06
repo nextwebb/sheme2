@@ -191,6 +191,7 @@
         <div class="row ">
           <div class="col-md-7">
             <div class="media d-block room mb-0">
+              <a href="hotel-rooms/<?php echo strtolower(str_replace(" ","-", room($id)[1][1]))  ?>.php"  class="media d-block room bg first-room">
               <div style="position: relative; background-color: rgba(0,0,0,0.5);">
                 <img src="images/<?php echo room($id)[7][1][3] ?>" alt="<?php echo room($id)[4][1] ?>" title="<?php echo room($id)[1][1] ?>" class="img-fluid">
                 <div style="position: absolute;bottom: 0px; width: 100%; background-color:rgba(0,0,0,0.5); padding: 10px">
@@ -200,7 +201,7 @@
                       <?php echo "₦".number_format(room($id)[2][1]) ?> 
                     </span>
                     <span class="float-left">
-                      <strong style="color: #fff; padding: 10px;  "><?php echo room($id)[1][1] ?> </strong>
+                      <strong style="color: #fff; padding: 10px;  "><?php echo ucfirst(room($id)[1][1]) ?> </strong>
                       <div  style=" margin-left: 10px;margin-top:0px; padding-top: 0px;color: #fff; " class="mt-0">  <small>
                           <i class="fa fa-star" aria-hidden="true"></i>
                           <i class="fa fa-star" aria-hidden="true"></i>
@@ -221,7 +222,7 @@
                 
                 <div class="clearfix">
                           <div class="col-sm-8 float-left">
-                            <h3 class="mt-0"><a href="hotel-rooms/<?php echo strtolower(str_replace(" ","-", room($id)[1][1]))  ?>/index.php"><?php echo room($id)[1][1] ?> </a></h3>
+                            <h3 class="mt-0"><a href="hotel-rooms/<?php echo strtolower(str_replace(" ","-", room($id)[1][1]))  ?>/index.php"><?php echo ucfirst(room($id)[1][1]);  ?> </a></h3>
                               <ul class="room-specs">
                                 <li><span class="ion-ios-people-outline"></span> 2 Guests</li>
                                 <li><span class="ion-ios-crop"></span> 22 ft <sup>2</sup></li>
@@ -236,7 +237,7 @@
                               <?php
                                 $text = room($id)[4][1];
                                 $max =45;
-                                $append= '<a href="room1.html">..continue..</a>';
+                                $append= '<a href="hotel-rooms/index.php">..continue..</a>';
                                 echo substr($text, 0, $max).$append;
                               ?> 
                             </P>
@@ -244,10 +245,11 @@
                     
                 </div>
               </div>
+              </a>
             </div>
           </div>
           <div class="col-md-5 room-thumbnail-absolute">
-            <a href="hotel-rooms/<?php echo strtolower(str_replace(" ","-", room($id)[1][2]))  ?>/index.php" class="media d-block room bg first-room" >
+            <a href="hotel-rooms/<?php echo strtolower(str_replace(" ","-", room($id)[1][2]))  ?>.php" class="media d-block room bg first-room" >
               <div style="position: relative; background-color: rgba(0,0,0,0.5);">
                  
                       <img src="images/<?php echo room($id)[7][2][1] ?>" alt="<?php echo room($id)[4][2] ?>" title="<?php echo room($id)[1][2] ?>" class="img-fluid">
@@ -260,7 +262,7 @@
                       <i class="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <span class="float-left">
-                      <strong style="color: #fff; padding: 10px;  "><?php echo room($id)[1][2] ?></strong>
+                      <strong style="color: #fff; padding: 10px;  "><?php echo ucfirst(room($id)[1][2]) ?></strong>
                     </span>
                   </div>
                     
@@ -269,7 +271,7 @@
               </div>
                     
             </a>
-            <a href="hotel-rooms/<?php echo strtolower(str_replace(" ","-", room($id)[1][3]))  ?>/index.php" class="media d-block room bg first-room" >
+            <a href="hotel-rooms/<?php echo strtolower(str_replace(" ","-", room($id)[1][3]))  ?>.php" class="media d-block room bg first-room" >
               <div style="position: relative; background-color: rgba(0,0,0,0.5);">
                  
                       <img src="images/<?php echo room($id)[7][3][1] ?>" alt="<?php echo room($id)[4][3] ?>" title="<?php echo room($id)[1][3] ?>" class="img-fluid">
@@ -282,7 +284,7 @@
                       <i class="fa fa-star" aria-hidden="true"></i>
                     </span>
                     <span class="float-left">
-                      <strong style="color: #fff; padding: 10px; "><?php echo room($id)[1][3] ?></strong>
+                      <strong style="color: #fff; padding: 10px; "><?php echo ucfirst(room($id)[1][3]) ?></strong>
                     </span>
                   </div>
                     
@@ -319,18 +321,22 @@
           </div>
         </div>
         <div class="row ">
-          <div class="col-md-4"  >
+          <?php 
+
+              $n=3;
+              for ($i = 1; $i <=$n; $i++){
+                echo '<div class="col-md-4"  >';?>
             <div class="post-entry">
-              <a href="room2.html"><img src="images/<?php echo gallery($id)[3][10] ?>" alt="<?php echo gallery($id)[2][10] ?>"  title="<?php  echo gallery($id)[1][10] ?>" class="img-fluid"></a>
+              <a href="gallery/index.php"><img src="images/<?php echo gallery($id)[3][$i] ?>" alt="<?php echo gallery($id)[2][$i]; ?>"  title="<?php  echo gallery($id)[1][$i] ?>" class="img-fluid"></a>
               <div class="body-text">
-                <div class="category"><?php echo gallery($id)[1][10] ?></div>
-                <h3 class="mb-3"><a href="room2.html"><?php echo gallery($id)[1][10] ?></a></h3>
+                <div class="category"><?php  echo ucwords(gallery($id)[1][$i]); ?></div>
+                <h3 class="mb-3"><a href="gallery/index.php"><?php echo ucwords(gallery($id)[1][$i]);  ?></a></h3>
                 <p class="mb-4">
                   <?php
                       
-                            $text = gallery($id)[2][10];
+                            $text = gallery($id)[2][$i];
                             $max =45;
-                            $append= '<a href="room1.html">..continue..</a>';
+                            $append= '<a href="gallery/index.php">..continue..</a>';
                             echo substr($text, 0, $max).$append;
                             
                               
@@ -338,39 +344,16 @@
                 </p>
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="post-entry" >
-              <a href=""><img src="images/<?php echo gallery($id)[3][9] ?>" alt="<?php echo gallery($id)[2][9] ?>" title="<?php echo gallery($id)[1][9] ?>"  class="img-fluid"></a>
-              <div class="body-text">
-                <div class="category"><?php echo gallery($id)[1][9] ?></div>
-                <h3 class="mb-3"><a href="gallery.html"><?php echo gallery($id)[1][9] ?></a></h3>
-                <p class="mb-4"><?php echo gallery($id)[2][9] ?></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4" >
-            <div class="post-entry" >
-              <a href="room1.html"><img src="images/<?php echo gallery($id)[3][8] ?>" alt="<?php echo gallery($id)[2][8] ?>" title="<?php echo gallery($id)[1][8] ?>" class="img-fluid"></a>
-              <div class="body-text">
-                <div class="category"><?php echo gallery($id)[1][8] ?></div>
-                <h3 class="mb-3"><a href="room1.html"><?php echo gallery($id)[1][8] ?></a></h3>
-                <p class="mb-4">
-                 <?php 
-                            $text = gallery($id)[2][8];
-                            $max =44;
-                            $append= '<a href="room1.html">..continue..</a>';
-                            echo substr($text, 0, $max).$append;
-                              ?>
+         <?php echo '</div>' ?>
+              <?php } ?>
 
-              </p>
-              </div>
-            </div>
-          </div>
+          
+         
+         
           <div class="container">
             <div class="row justify-content-md-center">
               <div class="col-md-auto">
-                <p><a href="gallery.html" class="btn btn-primary btn-sm">View All Gallery</a></p>
+                <p><a href="gallery/index.php" class="btn btn-primary btn-sm">View All Gallery</a></p>
               </div>
             </div>
         </div>
@@ -390,46 +373,40 @@
   <div class="mt-5">
 <div class="container">
             <div class="row ">
-          <div class="col-md-4" style=" margin-top:20px;margin-bottom: 10px;">
+              <?php 
+                  $t=2; 
+                for ($i = 1; $i <=$t ; $i++) {
+                       echo  '<div class="col-md-4" style=" margin-top:20px;margin-bottom: 10px;">';?>
             <div class="post-entry mh-100 d-inline-block p-2 " style="height:400px; background-color: #fff";>
-              <a href="gallery.html"><img  src="images/<?php echo fac($id)[7][5][1]?>"  class="img-fluid" alt="<?php echo fac($id)[5][5] ?>" title="<?php echo fac($id)[1][5] ?>"></a>
+              <a href="facilities/index.php"><img  src="images/<?php echo fac($id)[7][5][1]?>"  class="img-fluid" alt="<?php echo fac($id)[5][5] ?>" title="<?php echo fac($id)[1][5] ?>"></a>
               <div class="body-text" style="height: 100px; padding: 0px;">
                 <div class="category"><?php echo fac($id)[1][5] ?></div>
-                <h3 class=""><a href="gallery.html"><?php echo fac($id)[1][5] ?></a></h3>
+                <h3 class=""><a href="facilities/index.php"><?php echo fac($id)[1][5] ?></a></h3>
                 <p class="mb-4" style="height:100px;background-color: #fff"> <?php 
                             $text = fac($id)[5][5];
                             $max =45;
-                            $append= '<a href="room1.html">..continue..</a>';
+                            $append= '<a href="facilities/index.php">..continue..</a>';
                             echo substr($text, 0, $max).$append;?></p>
               </div>
             </div>
-          </div>
-          <div class="col-md-4" style=" margin-top:20px;margin-bottom: 10px;">
-            <div class="post-entry mh-100 d-inline-block p-2 " style="height:400px; background-color: #fff";>
-              <a href="gallery.html"><img src="images/<?php echo fac($id)[7][4][1]?>"  class="img-fluid" alt="<?php echo fac($id)[5][4] ?>" title="<?php echo fac($id)[1][4] ?>"></a>
-              <div class="body-text" style="height: 100px; padding: 0px;">
-                <div class="category"><?php echo fac($id)[1][4] ?></div>
-                <h3 class=""><a href="gallery.html"><?php echo fac($id)[1][4] ?></a></h3>
-                <p class="mb-4" style="height:100px;background-color: #fff"><?php  
-                        $text = fac($id)[5][4];
-                            $max =45;
-                            $append= '<a href="room1.html">..continue..</a>';
-                            echo substr($text, 0, $max).$append;
-                ?></p>
+          <?php echo '</div>'; }?>
+               
+
+
+              
+          
+          <a href="facilities/index.php">
+              <div class="col-md-4" style=" min-height: 400px; position: relative; background-image: url(images/<?php echo fac($id)[7][6][1]?>); margin: 20px 0px 40px 0px; padding: 0px 15px 0px 15px;">
+                
+                  <div style="position: absolute;font-size:24px; font-size: 24px;font-weight: 900;top: 50%;left: 25%; width: 100% ">
+                    <a href="facilities/index.php" style="color: #fff">
+                           <i class="fa fa-plus" ></i><strong > &nbsp;See more</strong>
+                    </a>
+                </div>
+          </a>      
+                
+             
               </div>
-            </div>
-          </div>
-          <div class="col-md-4" style=" min-height: 400px; position: relative; background-image: url(images/<?php echo fac($id)[7][6][1]?>); margin: 20px 0px 40px 0px; padding: 0px 15px 0px 15px;">
-            
-              <div style="position: absolute;font-size:24px; font-size: 24px;font-weight: 900;top: 50%;left: 25%; width: 100% ">
-                <a href="" style="color: #fff">
-                       <i class="fa fa-plus" ></i><strong > &nbsp;See more</strong>
-                </a>
-            </div>
-            
-            
-         
-        </div>
         </div>
       </div>
       </div>
@@ -452,6 +429,12 @@
   file_put_contents($id."/en/index.php", $data_en);
 
   file_put_contents($id."/index.php", $data);
-  echo $data;
+
+  //final
+
+  file_put_contents($folder.$id."/en/index.php", $data_en);
+
+  file_put_contents($folder.$id."/index.php", $data);
+  //echo $data;
   ?>
  

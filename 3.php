@@ -316,7 +316,7 @@ $n = room(1)[0];//total room 3
                     <div class="col-md-12 d-flex justify-content-start ">
 
                       <div class="mb-3 element-animate">
-                        <h1 style="margin-bottom: 5px; border-bottom: 2px solid #c9ac87">Other Rooms</h1>
+                        <h1 style="margin-bottom: 5px; border-bottom: 2px solid #c9ac87">Other Suites</h1>
                       </div>
 
                     </div>
@@ -329,7 +329,7 @@ $n = room(1)[0];//total room 3
                         echo '<div class="col-md-4" style="margin-bottom: 10px;">' ?>
                            
                           <div class="post-entry mh-100 d-inline-block p-2" style="background-color: #fff";>
-                            <a href="<?php echo strtolower(str_replace(" ","-", room($id)[1][$c]))  ?>/index.php"><img src="images/<?php echo room($id)[7][$c][1]; ?>" alt="<?php echo room($id)[4][$c]  ?>" title="<?php echo room($id)[1][$c]  ?>"></a>
+                            <a href="<?php echo strtolower(str_replace(" ","-", room($id)[1][$c]))  ?>.php"><img src="images/<?php echo room($id)[7][$c][1]; ?>" alt="<?php echo room($id)[4][$c]  ?>" title="<?php echo room($id)[1][$c]  ?>"></a>
                             <div class="body-text" style="height: 100px; padding: 0px;">
                                
                                   <div class="category" style="color: #000"><?php echo room($id)[1][$c]  ?></div>
@@ -364,15 +364,21 @@ $n = room(1)[0];//total room 3
             $data1 =str_replace("assets/", "../assets/", $data);
 
             $data1 =str_replace("images/", "../images/", $data1);
+            file_put_contents($id."/hotel-rooms/$subdir.php", $data1);
+            file_put_contents($folder.$id."/hotel-rooms/$subdir.php", $data1);
+
+
 
             $data_en =str_replace("../images/", "../../images/", $data1);
-
             $data_en =str_replace("../assets/", "../../assets/", $data_en);
-
             file_put_contents($id."/en/hotel-rooms/$subdir.php", $data_en);
+            file_put_contents($folder.$id."/en/hotel-rooms/$subdir.php", $data_en);
+            
+            //final
 
-            file_put_contents($id."/hotel-rooms/$subdir.php", $data1);
+           
 
+            
             //echo $data;
              //break;
                   }?>

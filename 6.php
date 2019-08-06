@@ -214,13 +214,22 @@
   $data1 =str_replace("images/", "../images/", $data1);
 
   $data_en =str_replace("../images/", "../../images/", $data1);
+  file_put_contents($id."/contact-us/index.php", $data1);
+  file_put_contents($folder.$id."/contact-us/index.php", $data1);
 
   $data_en =str_replace("../assets/", "../../assets/", $data_en);
+  file_put_contents($id."/en/contact-us/index.php", $data_en);
+  file_put_contents($folder.$id."/en/contact-us/index.php", $data_en);
+ 
 
 
-  file_put_contents($id."/en/contact-us/index.php", $data_en);  
+   
 
-  file_put_contents("$id/contact-us/index.php", $data1);
+  
+
+  //final
+      
+      
 
  // echo $data;
   ?>

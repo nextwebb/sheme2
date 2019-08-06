@@ -33,6 +33,7 @@
 
   <!-- Custom stlylesheet -->
   <link type="text/css" rel="stylesheet" href="assets/css/404.css"/>
+ 
 
    <script type="application/ld+json">
     {
@@ -234,7 +235,7 @@
 
 
 
-
+<?php include('includes/footer.php'); ?>
  
 <script type="text/javascript">
   $(".imageresource").on("click", function() {
@@ -244,7 +245,7 @@
 });
 </script>
 
-<?php include('includes/footer.php'); ?>
+
 
   <?php
   
@@ -259,14 +260,19 @@
 
 
   $data_en =str_replace("../images/", "../../images/", $data1);
+  file_put_contents($id."/gallery/index.php", $data1);
+  file_put_contents($folder.$id."/gallery/index.php", $data1);
 
   $data_en =str_replace("../assets/", "../../assets/", $data_en);
-
-
   file_put_contents($id."/en/gallery/index.php", $data_en);
+  file_put_contents($folder.$id."/en/gallery/index.php", $data_en);
 
+  
 
-  file_put_contents($id."/gallery/index.php", $data1);
+  //final
+      
+
+      
 
     //echo $data;
   ?>

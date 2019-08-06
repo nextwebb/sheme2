@@ -125,7 +125,7 @@
           echo ' <div class="row "> '?>
                     <div class="col-sm-4 mb-4 mt-4">
                         <div class="container_all_rooms">
-                          <a href="<?php echo strtolower(str_replace(" ","-", room(1)[1][$i]))  ?>/index.php">
+                          <a href="<?php echo strtolower(str_replace(" ","-", room(1)[1][$i]))  ?>.php">
                               <img src="images/<?php 
                                       for ($j = 1; $j <=$a ; $j++) {
          
@@ -190,19 +190,25 @@
   ob_clean();  // clears buffer and closes buffering
 
   $data1 =str_replace("assets/", "../assets/", $data);
-
   $data1 =str_replace("images/", "../images/", $data1);
+  file_put_contents($id."/hotel-rooms/index.php", $data1);
+  file_put_contents($folder.$id."/hotel-rooms/index.php", $data1);
 
   
 
   $data_en =str_replace("../images/", "../../images/", $data1);
-
   $data_en =str_replace("../assets/", "../../assets/", $data_en);
+  file_put_contents($id."/en/hotel-rooms/index.php", $data_en);
+  file_put_contents($folder.$id."/en/hotel-rooms/index.php", $data_en);
 
  
 
-  file_put_contents($id."/hotel-rooms/index.php", $data1);
-  file_put_contents($id."/en/hotel-rooms/index.php", $data_en);
+  
+  
+//final
+ 
+
+  
    // echo $data;
   ?>
    
