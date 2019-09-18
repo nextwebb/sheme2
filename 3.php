@@ -112,8 +112,8 @@ $n = room(1)[0];//total room 3
                  "address" : {
                     "streetAddress" : "<?php echo settings($id)['address1']  ?>",
                     "postalCode" : "",
-                    "addressRegion" : "<?php echo settings($id)['address1']  ?>",
-                    "addressLocality" : "<?php echo settings($id)['address1']  ?>",
+                    "addressRegion" : "<?php echo settings($id)['address2']  ?>",
+                    "addressLocality" : "<?php echo settings($id)['city']  ?>",
                     "@type" : "PostalAddress",
                     "addressCountry" : "Nigeria",
                     "telephone" : "<?php echo settings($id)['hotline']  ?>"
@@ -218,6 +218,7 @@ $n = room(1)[0];//total room 3
                                <?php for ($b = 1; $b <=$n ; $b++) {
                                    echo '<div class="carousel-item"> '?>
                                 <img class='center_room_image' src="images/<?php echo room($id)[7][1][$i]  ?>" alt="<?php echo room($id)[4][1]  ?>" title="<?php echo room($id)[1][$b]  ?>">
+                                
                               <?php echo '</div>'?>
                                  
                                <?php }?>

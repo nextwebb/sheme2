@@ -227,10 +227,13 @@
                                 <img class='center_room_image' src="../../images/business3.jpg" alt="Our business suites consists of a room and a sitting room. Exclusively reserved for guests who crave for the unique provisions only associated with us providing your hospitality needs. Just between the sitting room and the bedroom is an interconnecting door whose access can be restricted by the occupants. Also in the bedroom is a small sitting area, able to seat two persons. Stay in our business suites and enjoy daily supply of fresh toiletries, excellent room service, free access to high speed internet, complimentary breakfast, and lots more. It?s indeed a total package for the business minded individual." title="business suite">
                               </div>
                                <div class="carousel-item">                                 <img class='center_room_image' src="../../images/presidential2.jpg" alt="This room has 2 rooms, 1 parlor and 1 dining. Yes! Come experience the presidential treat in our presidential suite. It?s a feeling better experienced than imagined. With you in our presidential suite, you are nothing but a king. Our presidential suite offers just more than you would possibly ask. Each room is an exact replica of the other. Guests that want to stay with their families usually prefer the presidential room, especially when its one big family event, and everybody wants to stay in the same room. When you request for the presidential suite, you get our premium suite, with nothing but the best." title="presidential suite">
+                                
                               </div>                                 
                                <div class="carousel-item">                                 <img class='center_room_image' src="../../images/presidential2.jpg" alt="This room has 2 rooms, 1 parlor and 1 dining. Yes! Come experience the presidential treat in our presidential suite. It?s a feeling better experienced than imagined. With you in our presidential suite, you are nothing but a king. Our presidential suite offers just more than you would possibly ask. Each room is an exact replica of the other. Guests that want to stay with their families usually prefer the presidential room, especially when its one big family event, and everybody wants to stay in the same room. When you request for the presidential suite, you get our premium suite, with nothing but the best." title="business suite">
+                                
                               </div>                                 
                                <div class="carousel-item">                                 <img class='center_room_image' src="../../images/presidential2.jpg" alt="This room has 2 rooms, 1 parlor and 1 dining. Yes! Come experience the presidential treat in our presidential suite. It?s a feeling better experienced than imagined. With you in our presidential suite, you are nothing but a king. Our presidential suite offers just more than you would possibly ask. Each room is an exact replica of the other. Guests that want to stay with their families usually prefer the presidential room, especially when its one big family event, and everybody wants to stay in the same room. When you request for the presidential suite, you get our premium suite, with nothing but the best." title="classic suite">
+                                
                               </div>                                 
                                                              
                               
@@ -326,7 +329,7 @@
                     <div class="col-md-12 d-flex justify-content-start ">
 
                       <div class="mb-3 element-animate">
-                        <h1 style="margin-bottom: 5px; border-bottom: 2px solid #c9ac87">Other Rooms</h1>
+                        <h1 style="margin-bottom: 5px; border-bottom: 2px solid #c9ac87">Other Suites</h1>
                       </div>
 
                     </div>
